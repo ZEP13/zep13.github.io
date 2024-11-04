@@ -1,0 +1,306 @@
+body{
+    background: #212121;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 700px;
+}
+.about span{
+    color:#607D8B;
+    margin: 1.5vw 0;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+.navbox{
+    visibility: visible;
+    margin: 0 20vw 0 15vw;
+    padding: 1.5vw;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: inset 5px 5px 5px rgb(25, 25, 25), inset -5px -5px 5px 0px rgb(60, 60, 60);
+}
+.about{
+    display: flex;
+    flex-direction: column;
+}
+.spanabout{
+    margin: 1vw 0;
+}
+.profil{
+    padding: 1.5vw;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: inset 5px 5px 5px rgb(25, 25, 25), inset -5px -5px 5px 0px rgb(60, 60, 60);
+    visibility: visible;
+}
+.textprof a{
+    color: #607D8B;
+    text-decoration: none;
+    margin: 0.5vw 1vw;
+}
+.textprof h2{
+    margin: 0.5vw 1vw;
+    color: hsla(14, 100%, 57%, 0.6);
+    font-size: 3.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.textprof h2{
+    overflow: hidden;
+    border-right: 1px solid white;
+    white-space: nowrap;
+    animation: typing 3s steps(22) forwards;
+}
+@keyframes typing{
+    form{
+        width: 0;
+    }
+    to {
+        width: 97%;
+    }
+}
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
+.socialIcon{
+    display: flex;
+}
+.socialIcon a img{
+    display: flex;
+    align-items: center;
+    width: 3vw;
+}
+#insta{
+    scale: 80%;
+}
+.hire{
+    margin: 1vw 0;
+}
+.hire a{
+    color: #607D8B;
+    text-decoration: none;
+}
+.boxform{
+    position: absolute;
+    height: 400px;
+    width: 350px;
+    top: 155px; left: 50%;
+    background-color: #212121;
+    border: 2px solid hsla(14, 100%, 57%, 0.6);
+    border-radius: 25px;
+    visibility: hidden;
+    transform: translate(-50%);
+}
+.box h3{
+    color: hsla(14, 100%, 57%, 0.6);
+    position: relative;
+    top: 5px; left: 20px;
+    width: 250px;
+}
+.boxexp{
+    position: absolute;
+    height: 400px;
+    width: 350px;
+    top: 155px; left: 50%;
+    border: 2px solid hsla(14, 100%, 57%, 0.6);
+    background-color: #212121;
+    border-radius: 25px;
+    visibility: hidden;
+    transform: translate(-50%);
+
+}
+.boxcontact{
+    position: absolute;
+    height: 400px;
+    width: auto;
+    top: 155px; left: 50%;
+    background-color: #212121;
+    border: 2px solid hsla(14, 100%, 57%, 0.6);
+    border-radius: 25px;
+    visibility: hidden;
+    transform: translate(-50%);
+}
+.compbar{
+    width: 200px;
+    position: relative;
+    left: 10px;
+    display: flex;
+    padding: 1vw;
+    background-color: #212121;
+}
+.competence{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1vw;
+    color: antiquewhite;
+}
+
+.competence sp,
+.competence1 sp{
+    margin: 0.6vw;
+}
+.barcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.bar,
+.bar1{
+    margin: 0.6vw;
+    width: 200px;
+    height: 7px;
+    border: 1px solid antiquewhite;
+    border-radius: 24px;
+}
+.bar .progresse,
+.bar1 .progresse1{
+    height: 100%;
+    border-radius: 24px;
+    background-color: antiquewhite;
+}
+.bar:nth-child(1) .progresse{
+    width: 80%;
+}
+.bar:nth-child(2) .progresse{
+    width: 90%;
+}
+.bar:nth-child(3) .progresse{
+    width: 40%;
+}
+.bar:nth-child(4) .progresse{
+    width: 20%;
+}
+.bar1:nth-child(1) .progresse1{
+    width: 100%;
+}
+.bar1:nth-child(2) .progresse1{
+    width: 80%;
+}
+.show-box{
+    visibility: visible;
+}
+.hid-box{
+    visibility: hidden;
+}
+form{
+    display: grid;
+    grid-template-areas:
+        "nom mail"
+       "mes mes"
+        "date send";
+    gap: 1vw;
+    margin: 30px auto;
+    max-width: 700px;
+    padding: 2vw;
+    
+}
+input{
+    padding: 0.6vw;
+    border-radius: 15px;
+}
+input,
+textarea{
+    background-color: #212121;
+}
+#send{
+    grid-area: send;
+    background: #607D8B;
+    border: 2px solid black;
+}
+#send:hover{
+    background: hsla(14, 100%, 57%, 0.6);
+    transition: 0.2s;
+}
+#date{
+    grid-area: date;
+}
+#textearea{
+    grid-area: mes;
+    resize:none;
+    padding:  1vw;
+    outline: none;
+    border-radius: 15px;
+}
+#mail{
+    grid-area: mail;
+}
+#conta{
+    grid-area: nom;
+}
+.contact{
+    background-color: rgba(0, 0, 0, 0.848);
+}
+.cv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+    width: 120px;
+    position: relative;
+    left: 25px;
+    border: 1px solid #ff572499;
+    border-radius: 10px;
+}
+.cv a{
+    text-decoration: none;
+    color: #ff572499;
+    font-size: 15px;
+}
+.cv:hover{
+    transform: translateY(-4px);
+    transition: 0.4s ease;
+}
+.topbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.topbox svg{
+    top: 15px;
+    right: 15px;
+}
+
+@media screen and (max-width: 750px){
+    
+    nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .boxform,
+    .boxexp,
+    .boxcontact{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .navbox{
+        margin: 50px;
+    }
+    .about{
+        padding: 0.5vw;
+        flex-direction: row;
+    }
+    .about span{
+        margin: 0 15px;
+        font-size: 3vw;
+    }
+    .profil{
+        padding: 20px;
+    }
+    .textprof h2{
+        font-size: 30px;
+    }
+    .socialIcon{
+        margin-top: 10px;
+    }
+    .socialIcon a{
+        margin-right: 10px;
+        scale: 200%;
+    }
+}
