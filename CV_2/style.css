@@ -115,7 +115,7 @@ nav{
 .boxhome{
     position: absolute;
     height: 400px;
-    width: 380px;
+    width: 350px;
     top: 155px; left: 50%;
     border: 2px solid hsla(14, 100%, 57%, 0.6);
     background-color: #212121;
