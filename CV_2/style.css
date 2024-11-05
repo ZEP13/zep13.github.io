@@ -20,8 +20,9 @@ nav{
     margin: 0 20vw 0 15vw;
     padding: 1.5vw;
     border-radius: 30px;
-    background: #212121;
-    box-shadow: inset 5px 5px 5px rgb(25, 25, 25), inset -5px -5px 5px 0px rgb(60, 60, 60);
+    background: linear-gradient(145deg, #1e1e1e, #232323);
+    box-shadow:  10px 10px 20px #111111,
+             -10px -10px 20px #323232;
 }
 .about{
     display: flex;
@@ -33,8 +34,9 @@ nav{
 .profil{
     padding: 1.5vw;
     border-radius: 30px;
-    background: #212121;
-    box-shadow: inset 5px 5px 5px rgb(25, 25, 25), inset -5px -5px 5px 0px rgb(60, 60, 60);
+    background: linear-gradient(145deg, #1e1e1e, #232323);
+    box-shadow:  10px 10px 20px #111111,
+             -10px -10px 20px #323232;
     visibility: visible;
 }
 .textprof a{
@@ -43,7 +45,7 @@ nav{
 }
 .textprof h2{
     margin: 0.5vw 1vw;
-    color: hsla(14, 100%, 57%, 0.6);
+    color: #cca8ffa1;
     font-size: 3.5vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -73,9 +75,6 @@ nav{
     display: flex;
     align-items: center;
     width: 3vw;
-}
-#insta{
-    scale: 80%;
 }
 .hire{
     margin: 1vw 0;
@@ -108,11 +107,66 @@ nav{
     
 }
 .box h3{
-    color: hsla(14, 100%, 57%, 0.6);
+    color: #cca8ffa1;
     position: relative;
     top: 5px; left: 20px;
     width: 250px;
 }
+.boxhome{
+    position: absolute;
+    height: 400px;
+    width: 380px;
+    top: 155px; left: 50%;
+    border: 2px solid hsla(14, 100%, 57%, 0.6);
+    background-color: #212121;
+    border-radius: 25px;
+    visibility: hidden;
+    transform: translate(-50%);    
+}
+.home{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    -ms-transform: translate(-50%, -50%);
+    position: relative;
+    width: 80%;
+  }
+  
+  .homeimg {
+    border: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .cv {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #212121;
+  }
+  
+  .home:hover .cv {
+    opacity: 1;
+  }
+  
+  .down {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
 .boxexp{
     position: absolute;
     height: 400px;
@@ -247,13 +301,7 @@ textarea{
     background-color: rgba(0, 0, 0, 0.848);
 }
 .cv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 4px 2px;
-    width: 120px;
-    position: relative;
-    left: 25px;
     border: 1px solid #ff572499;
     border-radius: 10px;
 }
@@ -273,7 +321,8 @@ textarea{
 }
 .closebox3,
 .closebox2,
-.closebox1{
+.closebox1,
+.closebox{
     position: relative;
     top: 5px;
     right: 5px;
@@ -346,7 +395,8 @@ button {
     }
     .boxform,
     .boxexp,
-    .boxcontact{
+    .boxcontact,
+    .boxhome{
         position: absolute;
         left: 50%;
         top: 50%;
@@ -355,9 +405,12 @@ button {
     .boxexp{
         width: 330px;
     }
-    .navbox{
-        margin: 50px;
-        box-shadow: inset 0px 5px 2px rgb(25, 25, 25), inset 0px -2px 4px 1px rgb(60, 60, 60);
+    .navbox,
+    .profil{
+        margin: 20px;
+        background: #212121;
+        box-shadow: inset -5px -5px 5px #111111,
+                inset 4px 4px 5px #323232;
     }
     .about{
         padding: 0.5vw;
@@ -379,6 +432,9 @@ button {
     .socialIcon a{
         margin-right: 10px;
         scale: 200%;
+    }
+    .socialIcon .git img{
+        padding-left: 5px;
     }
     form{
         grid-template-areas: 
@@ -414,10 +470,6 @@ button {
 #conta{
     grid-area: nom;
 }
-
-
-
-
 .pit {
     position: relative;
     display: inline-block;
