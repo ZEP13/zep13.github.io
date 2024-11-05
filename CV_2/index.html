@@ -50,6 +50,12 @@
             </a>
           </div>
         </span>
+        <div class="forma">
+          <li>Option Sciences Appliquées (CESS) Juin 2020</li>
+          <li>Sciences informatiques Ucl (Non Diplômé) de Sept. 2020 à Sept.2023
+          </li>
+          <li>Developpeur Weeb ifapme E6K (En cours)</li>
+        </div>
       </div>
       <div class="boxexp" id="box">
         <span class="box">
@@ -71,10 +77,16 @@
           </div>
           <div class="compbar">
             <div class="competence">
-              <sp>Python</sp>
+              <sp class="pit"
+                >Python
+                <span class="tooltip"
+                  >Maitrise des bases jusqu'au class et heritage</span
+                ></sp
+              >
               <sp>HTML</sp>
               <sp>CSS</sp>
-              <sp>JavaScript</sp>
+              <sp class="pit">JavaScript <span class="tooltip"
+                  >Maitrise variables et valeurs</span</sp>
             </div>
             <div class="barcontainer">
               <div class="bar"><div class="progresse"></div></div>
@@ -115,16 +127,26 @@
           </div>
         </span>
 
-        <form class="priseContacte">
+        <form
+          action="https://formsubmit.co/zephyr.lathuy@apprenant.ifapme.be"
+          method="post"
+          class="priseContacte"
+        >
           <input
+            required
+            autocomplete="organization"
             id="conta"
-            type="text"
+            type="given-name"
             name="nomEntreprise"
+            minlength="2"
+            maxlength="25"
             placeholder="Nom Entreprise"
           />
           <input
+            required
+            autocomplete="email"
             id="mail"
-            type="text"
+            type="email"
             name="mail"
             placeholder="Votre aderesse mail"
           />
@@ -133,8 +155,36 @@
             id="textearea"
             placeholder="Votre message"
           ></textarea>
-          <input id="date" type="datetime-local" name="date" />
-          <input id="send" type="submit" value="Envoyer" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            id="date"
+            type="tel"
+            name="date"
+            required
+            autocomplete="tel-country-code"
+            pattern="[0-9]{3}"
+            placeholder=" ex: +32 *** ** ** **"
+            aria-label="3-digit prefix"
+          />
+          <button>
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <span>Envoyer</span>
+          </button>
         </form>
 
         <div class="cv">
@@ -145,3 +195,4 @@
     <script src="./index.js"></script>
   </body>
 </html>
+
