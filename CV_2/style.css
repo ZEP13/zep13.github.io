@@ -9,7 +9,7 @@ nav{
     height: 700px;
 }
 .about span{
-    color:#607D8B;
+    color:antiquewhite;
     margin: 1.5vw 0;
     text-decoration: none;
     font-size: 20px;
@@ -38,7 +38,6 @@ nav{
     visibility: visible;
 }
 .textprof a{
-    color: #607D8B;
     text-decoration: none;
     margin: 0.5vw 1vw;
 }
@@ -96,6 +95,17 @@ nav{
     visibility: hidden;
     transform: translate(-50%);
 }
+.forma{
+    display: flex;
+    position: relative;
+    left: 20px;
+    flex-direction: column;
+    color: antiquewhite;
+    max-width: 300px;
+}
+.forma li{
+    margin: 7px;
+}
 .box h3{
     color: hsla(14, 100%, 57%, 0.6);
     position: relative;
@@ -105,7 +115,7 @@ nav{
 .boxexp{
     position: absolute;
     height: 400px;
-    width: 350px;
+    width: 380px;
     top: 155px; left: 50%;
     border: 2px solid hsla(14, 100%, 57%, 0.6);
     background-color: #212121;
@@ -193,8 +203,8 @@ form{
         "nom mail"
        "mes mes"
         "date send";
-    gap: 1vw;
-    margin: 30px auto;
+    gap: 8px;
+    margin: 30px 10px;
     max-width: 700px;
     padding: 2vw;
     
@@ -205,7 +215,178 @@ input{
 }
 input,
 textarea{
+    color: antiquewhite;
     background-color: #212121;
+}
+#send{
+    grid-area: send;
+    border: 2px solid black;
+}
+
+#date{
+    grid-area: date;
+}
+#textearea{
+    grid-area: mes;
+    resize:none;
+    padding: 1vw;
+    outline: none;
+    border-radius: 15px;
+}
+#mail{
+    grid-area: mail;
+}
+#conta{
+    grid-area: nom;
+}
+::placeholder{
+    color: antiquewhite;
+}
+.contact{
+    background-color: rgba(0, 0, 0, 0.848);
+}
+.cv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 2px;
+    width: 120px;
+    position: relative;
+    left: 25px;
+    border: 1px solid #ff572499;
+    border-radius: 10px;
+}
+.cv a{
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 15px;
+}
+.cv:hover{
+    transform: translateY(-4px);
+    transition: 0.4s ease;
+}
+.topbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.closebox3,
+.closebox2,
+.closebox1{
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+button {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    border: 2px solid #ff572499;
+    background: #212121;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 37px;
+    width: 110px;
+    margin: 2px;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  button:hover span {
+    transform: translateX(5em);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  
+@media screen and (max-width: 750px){
+    
+    nav{
+        flex-direction: column-reverse;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .boxform,
+    .boxexp,
+    .boxcontact{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .boxexp{
+        width: 330px;
+    }
+    .navbox{
+        margin: 50px;
+        box-shadow: inset 0px 5px 2px rgb(25, 25, 25), inset 0px -2px 4px 1px rgb(60, 60, 60);
+    }
+    .about{
+        padding: 0.5vw;
+        flex-direction: row;
+    }
+    .about span{
+        margin: 0 15px;
+        font-size: 3vw;
+    }
+    .profil{
+        padding: 20px;
+    }
+    .textprof h2{
+        font-size: 30px;
+    }
+    .socialIcon{
+        margin-top: 10px;
+    }
+    .socialIcon a{
+        margin-right: 10px;
+        scale: 200%;
+    }
+    form{
+        grid-template-areas: 
+        "nom"
+        "mail"
+        "mes"
+        "date"
+        "send";
+}
 }
 #send{
     grid-area: send;
@@ -232,75 +413,37 @@ textarea{
 #conta{
     grid-area: nom;
 }
-.contact{
-    background-color: rgba(0, 0, 0, 0.848);
-}
-.cv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 0;
-    width: 120px;
-    position: relative;
-    left: 25px;
-    border: 1px solid #ff572499;
-    border-radius: 10px;
-}
-.cv a{
-    text-decoration: none;
-    color: #ff572499;
-    font-size: 15px;
-}
-.cv:hover{
-    transform: translateY(-4px);
-    transition: 0.4s ease;
-}
-.topbox{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.topbox svg{
-    top: 15px;
-    right: 15px;
-}
 
-@media screen and (max-width: 750px){
-    
-    nav{
-        flex-direction: column;
-        justify-content: center;
-    }
-    .boxform,
-    .boxexp,
-    .boxcontact{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .navbox{
-        margin: 50px;
-    }
-    .about{
-        padding: 0.5vw;
-        flex-direction: row;
-    }
-    .about span{
-        margin: 0 15px;
-        font-size: 3vw;
-    }
-    .profil{
-        padding: 20px;
-    }
-    .textprof h2{
-        font-size: 30px;
-    }
-    .socialIcon{
-        margin-top: 10px;
-    }
-    .socialIcon a{
-        margin-right: 10px;
-        scale: 200%;
-    }
-}
+
+
+
+.pit {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .pit .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+    top: -5px;
+    left: 105%;
+    border: 1px solid antiquewhite;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .pit:hover .tooltip {
+    visibility: visible;
+  }
+  
